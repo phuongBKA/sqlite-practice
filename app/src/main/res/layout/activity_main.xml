@@ -5,7 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.savvycom.sqlite_trongphuong_savvycom.MainActivity">
+    tools:context="com.example.savvycom.sqlite_trongphuong_savvycom.SQLiteActivity">
+
+    <EditText
+        android:enabled="false"
+        android:id="@+id/edt_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="id" />
 
     <EditText
         android:id="@+id/edt_name"
@@ -31,16 +38,32 @@
         android:layout_height="wrap_content"
         android:hint="Email" />
 
-    <Button
-        android:id="@+id/btn_save"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Save" />
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Update"/>
+
+    </LinearLayout>
+
 
     <ListView
+        android:id="@+id/lv_student"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/lv_student"/>
+        android:layout_height="match_parent" />
 
 </LinearLayout>

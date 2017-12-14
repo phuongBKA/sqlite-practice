@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.savvycom.sqlite_trongphuong_savvycom.DirectionActivity">
+
+
+    <Button
+        android:id="@+id/btn_external_storage"
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/btn_sqlite"
+        android:layout_marginLeft="41dp"
+        android:layout_marginStart="41dp"
+        android:text="External Storage" />
+
+    <Button
+        android:id="@+id/btn_sqlite"
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="65dp"
+        android:layout_marginStart="65dp"
+        android:layout_toEndOf="@+id/btn_external_storage"
+        android:layout_toRightOf="@+id/btn_external_storage"
+        android:text="SQLite" />
+</RelativeLayout>

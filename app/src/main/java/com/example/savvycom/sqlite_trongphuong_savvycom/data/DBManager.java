@@ -91,4 +91,19 @@ public class DBManager extends SQLiteOpenHelper {
         db.close();
         return listStudent;
     }
+
+    public int updateStudent(Student student) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(NAME, student.getmName());
+        contentValues.put(ADDRESS, student.getmAddress());
+        contentValues.put(EMAIL, student.getmEmail());
+        contentValues.put(PHONE_NUMBER, student.getmPhoneNumber());
+        return db.update(TABLE_NAME, contentValues, ID + "=?", new String[]{String.valueOf(student.getmID())});
+    }
+
+    public int deleteStudent(int id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(TABLE_NAME,ID+"=?", new String[]{String.valueOf(id)});
+    }
 }
